@@ -5,11 +5,12 @@ import './Header.css'
 
 const Header = () => {
   const {user} = useUser();
+  const {color, name} = user
   return (
     <header>
       <img src={logo} className="app-logo" alt="Alchemy Logo" />
       <p>
-        Meet <span style={{ color: `${user.color}` }}>{user.name}</span>!
+        Meet <span style={{ color: `${color}` }}>{name}</span>!
       </p>
     </header>
   )
