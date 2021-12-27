@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import logo from '../../assets/meet.png'
+import { useUser } from '../../context/UserContext'
 import './Header.css'
 
-const Header = ({ user }) => {
-  const { name, color } = user
+const Header = () => {
+  const {user} = useUser();
+  const {color, name} = user
   return (
     <header>
       <img src={logo} className="app-logo" alt="Alchemy Logo" />
